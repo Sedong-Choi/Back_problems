@@ -1,7 +1,7 @@
 package com.company.test.success;
 
 public class Pro_10172 {
-    public static void main(String[] args) {
+    public void solution() {
         System.out.println("|\\_/|\n" +
                 "|q p|   /}\n" +
                 "( 0 )\"\"\"\\\n" +

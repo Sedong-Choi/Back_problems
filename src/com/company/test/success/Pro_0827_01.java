@@ -1,16 +1,9 @@
 package com.company.test.success;
 
-public class pro_0827_01 {
+public class Pro_0827_01 {
     //프로그래머스 문제 
     // String to int 변환 문제
-    public static void main(String[] args) {
-
-        String s ="10";
-        int answer = solution(s);
-
-        System.out.println("결과 = " +answer);
-    }
-    static int solution(String n){
+    public void solution(String n){
         int answer = 0;
         String sub ="";
         boolean plus = true;
@@ -95,6 +88,6 @@ public class pro_0827_01 {
             answer = answer*(-1);
         }
 
-        return answer;
+        System.out.println("결과 = " +answer);
     }
 }
