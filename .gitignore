@@ -1,2 +1,16 @@
 # Project exclude paths
 /out/
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../:\Users\bulss\IdeaProjects\FirstTest\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# idea
+/.idea/
+
+/local.properties
+
+
