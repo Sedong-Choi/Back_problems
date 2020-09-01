@@ -1,7 +1,7 @@
 package com.company.test.success;
 
 public class Pro_0901_01 {
-//프로그래머스 실패율 문제
+//프로그래머스 실패율 문제5
         public int[] solution(int N, int[] stages) {
 
             int[] answer = new int[N];
