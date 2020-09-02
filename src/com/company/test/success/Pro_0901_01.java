@@ -54,7 +54,7 @@ public class Pro_0901_01 {
             for(int i =0; i<N;i++){
 
                 answer[i]= (int)asc[i][0];
-                System.out.println(asc[i][0]);
+                System.out.println("stage no."+asc[i][0]+" 실패율 = "+asc[i][1]);
             }
 
 
