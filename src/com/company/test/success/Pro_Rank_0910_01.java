@@ -20,7 +20,7 @@ public class Pro_Rank_0910_01 {
 
 }
 
-class MyRegex{
+    class MyRegex{
     public String pattern="";
     MyRegex(){
         // \\d{1,2} =>  한 자리 또는 두 자리의 숫자

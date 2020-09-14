@@ -1,13 +1,10 @@
 package com.company.test.notSolve;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Pro_0911_01 {
 
-    public int[] solution(String[] genres, int[] plays) {
+    public int[] solution(String[][] genres, int[] plays) {
         int[] answer = {};
         int len = genres.length;
         Map<String,Integer> count = new HashMap<String,Integer>();
@@ -17,9 +14,11 @@ public class Pro_0911_01 {
         //장르별 카운트 하기
         List<Song> song = new ArrayList<Song>();
         for(int i =0 ; i< len;i++){
-            count.put(genres[i],count.getOrDefault(genres[i],0)+plays[i]);
-            song_count.put(genres[i], count.getOrDefault(genres[i],0)+1);
+            count.put(genres[i][0],count.getOrDefault(genres[i],0)+plays[i]);
+            song_count.put(genres[i][0], count.getOrDefault(genres[i],0)+1);
+            song.add(new Song(i,genres[i][0],Integer.parseInt(genres[i][1])));
         }
+        Collections.sort(song);
         //장르 순서대로 정렬하기
         Map<Integer,Song> sortedsong = new HashMap<Integer,Song>();
         List<Integer> best = new ArrayList<Integer>();
