@@ -18,7 +18,7 @@ public class Pro_0911_01 {
             song_count.put(genres[i][0], count.getOrDefault(genres[i],0)+1);
             song.add(new Song(i,genres[i][0],Integer.parseInt(genres[i][1])));
         }
-        Collections.sort(song);
+//        Collections.sort(song);
         //장르 순서대로 정렬하기
         Map<Integer,Song> sortedsong = new HashMap<Integer,Song>();
         List<Integer> best = new ArrayList<Integer>();
