@@ -32,24 +32,26 @@ public class HackerPro_AI_01 {
                 }
             }
         }
-        int vertical =m_position[0] -p_position[0];
+        int vertical =m_position[0] - p_position[0];
+//        System.out.println("m = "+m_position[0]+", p = "+p_position[0]+", vertical = "+vertical);
         if(vertical>0){
             for(int i =0; i<vertical;i++) {
                 System.out.println("UP");
             }
         }else{
-            for(int i =0; i<vertical;i++) {
+            for(int i =0; i<Math.abs(vertical);i++) {
                 System.out.println("DOWN");
             }
         }
         int horizontal = m_position[1] -p_position[1];
+//        System.out.println("m = "+m_position[1]+", p = "+p_position[1]+",  horizontal= "+horizontal);
         if(horizontal>0){
             for(int i =0; i<horizontal;i++) {
                 System.out.println("LEFT");
             }
 
         }else{
-            for(int i =0; i<horizontal;i++) {
+            for(int i =0; i<Math.abs(horizontal);i++) {
                 System.out.println("RIGHT");
             }
         }
