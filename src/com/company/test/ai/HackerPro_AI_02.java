@@ -2,8 +2,9 @@ package com.company.test.ai;
 
 import java.util.Scanner;
 
-public class HackerPro_AI_01 {
-    //Bot saves princess
+public class HackerPro_AI_02 {
+    //Bot saves princess2
+    //주어진 것과 다르지만 알고리즘은 같다.
 
     public void solution(){
         Scanner sc = new Scanner(System.in);
@@ -19,7 +20,7 @@ public class HackerPro_AI_01 {
         for(int i =0; i<n ; i++){
             s= sc.nextLine();
             for(int j =0; j<n;j++){
-                matrix[i][j] = s.substring(j,j+1);
+                matrix[i][j] = ""+ s.charAt(j);
                 if(matrix[i][j].equals("m")){
                     //m의 위치 저장 1,1일것임!!!
                     m_position[0]=i;
@@ -32,32 +33,51 @@ public class HackerPro_AI_01 {
                 }
             }
         }
-
         int vertical =m_position[0] - p_position[0];
+        int horizontal = m_position[1] -p_position[1];
 //        System.out.println("m = "+m_position[0]+", p = "+p_position[0]+", vertical = "+vertical);
         if(vertical>0){
-            for(int i =0; i<vertical;i++) {
-                System.out.println("UP");
-            }
-        }else{
-            for(int i =0; i<Math.abs(vertical);i++) {
-                System.out.println("DOWN");
-            }
-        }
-        int horizontal = m_position[1] -p_position[1];
-//        System.out.println("m = "+m_position[1]+", p = "+p_position[1]+",  horizontal= "+horizontal);
-        if(horizontal>0){
-            for(int i =0; i<horizontal;i++) {
-                System.out.println("LEFT");
-            }
 
-        }else{
-            for(int i =0; i<Math.abs(horizontal);i++) {
+                System.out.println("UP");
+                matrix[m_position[0]][m_position[1]] = "-";
+                matrix[m_position[0]-1][m_position[1]] = "m";
+
+        }else if(vertical==0){
+            if(horizontal>0){
+
+                System.out.println("LEFT");
+                matrix[m_position[0]][m_position[1]] = "-";
+                matrix[m_position[0]][m_position[1]-1] = "m";
+
+
+            }else if(horizontal==0){
+
+            }else{
+
                 System.out.println("RIGHT");
+                matrix[m_position[0]][m_position[1]] = "-";
+                matrix[m_position[0]][m_position[1]+1] = "m";
+
             }
+        }else{
+
+                System.out.println("DOWN");
+                matrix[m_position[0]][m_position[1]] = "-";
+                matrix[m_position[0]+1][m_position[1]] = "m";
+
         }
+
+
+
+
+        for(int i =0; i<n;i++){
+            for(int j =0; j<n ; j++){
+                System.out.print(matrix[i][j]);
+            }
+            System.out.println();
+        }
+
 
         sc.close();
-
     }
 }
