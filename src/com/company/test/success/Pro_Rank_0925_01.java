@@ -31,7 +31,7 @@ public class Pro_Rank_0925_01 {
     }
 
 
-    public static int solution() {
+    public static void solution() {
         Scanner scan = new Scanner(System.in);
         String input = scan.nextLine();
         scan.close();
@@ -50,7 +50,7 @@ public class Pro_Rank_0925_01 {
 
         // Pop/Dequeue the chars at the head of both data structures and compare them:
         boolean isPalindrome = true;
-        for (int i = 0; i < s.length/2; i++) {
+        for (int i = 0; i < s.length / 2; i++) {
             if (p.popCharacter() != p.dequeueCharacter()) {
                 isPalindrome = false;
                 break;
@@ -58,8 +58,8 @@ public class Pro_Rank_0925_01 {
         }
 
         //Finally, print whether string s is palindrome or not.
-        System.out.println( "The word, " + input + ", is "
-                + ( (!isPalindrome) ? "not a palindrome." : "a palindrome." ) );
+        System.out.println("The word, " + input + ", is "
+                + ((!isPalindrome) ? "not a palindrome." : "a palindrome."));
     }
 
 }
