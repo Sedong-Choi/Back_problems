@@ -6,6 +6,8 @@ import java.io.*;
 public class Pro_Rank_0929_01{
     //Day 22: Binary Search Trees
     //node 의 height를 계산하는 알고리즘
+
+
     public static int getHeight(Node root){
         int heightLeft = 0;
         int heightRight = 0;
