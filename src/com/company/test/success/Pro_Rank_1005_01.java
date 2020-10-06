@@ -24,6 +24,7 @@ public class Pro_Rank_1005_01 {
 
             if(current.left!=null) result.add(current.left);
             if(current.right!=null) result.add(current.right);
+
         }
 
 
